@@ -37,7 +37,6 @@ export class AppService {
         html,
         text,
       });
-      console.log(result);
       return {
         success: true,
         message: 'Email enviado com sucesso',
