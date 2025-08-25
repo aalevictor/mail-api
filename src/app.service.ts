@@ -29,7 +29,7 @@ export class AppService {
     html?: string;
   }) {
     try {
-      await this.transporter.sendMail({
+      const result = await this.transporter.sendMail({
         from,
         to,
         bcc,
@@ -37,6 +37,7 @@ export class AppService {
         html,
         text,
       });
+      console.log(result);
       return {
         success: true,
         message: 'Email enviado com sucesso',
